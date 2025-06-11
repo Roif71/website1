@@ -12,12 +12,20 @@
     <div class="container">
       <a class="logo" href="index.html">
          <img src="image/logo.png" alt="Logo" class="logo-img" />
-         Top Ocean People</a>
+         <i class="brand-text"><h1 data-i18n="brand">Top Ocean People</h1></i>
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tentangkami.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="tentangkami.html" data-i18n="about">Tentang Kami</a></li>
+        <li><a href="kontak.html" data-i18n="contact">Kontak</a></li>
       </ul>
+
+      <!-- Language Switch Buttons -->
+      <div style="margin-left:auto;">
+        <button onclick="setLanguage('id')">ID</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
+
       <div class="menu-icon" id="menu-icon">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -26,26 +34,65 @@
     </div>
   </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="container hero-container">
-    <div class="hero-content">
-      <h2 style="font-size: 55px;">Selamat Datang di Pt Top Ocean People</h2>
+  <!-- HERO -->
+  <section id="hero" style="padding-top: 80px;">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h2 data-i18n="welcome" style="font-size: 45px;">
+          Selamat Datang di PT Top Ocean People
+          <p data-i18n="solution">Solusi Terbaik untuk Logistik dan Operasional Anda</p>
+        </h2>
+      </div>
+      <div class="hero-image">
+        <img src="https://www.marinetraffic.com/getPhoto/?photo_id=2703901&photo_size=800" alt="Kapal Laut">
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="https://www.marinetraffic.com/getPhoto/?photo_id=2703901&photo_size=800" alt="Kapal Laut">
-    </div>
-  </div>
-</section>
+    <br>
+    <p data-i18n="description">
+      PT Top Ocean People adalah perusahaan yang bergerak di bidang operasional dan kontrol kualitas, dengan komitmen pada profesionalisme dan integritas.
+    </p>
+  </section>
 
-
-
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Top Ocean People. All rights reserved.</p>
+    <p data-i18n="footer">&copy; 2025 Top Ocean People. All rights reserved.</p>
   </footer>
+
+  <!-- Language Script -->
+  <script>
+    const translations = {
+      id: {
+        brand: "Top Ocean People",
+        home: "Beranda",
+        about: "Tentang Kami",
+        contact: "Kontak",
+        welcome: "Selamat Datang di PT Top Ocean People",
+        solution: "Solusi Terbaik untuk Logistik dan Operasional Anda",
+        description: "PT Top Ocean People adalah perusahaan yang bergerak di bidang operasional dan kontrol kualitas, dengan komitmen pada profesionalisme dan integritas.",
+        footer: "&copy; 2025 Top Ocean People. Hak cipta dilindungi."
+      },
+      en: {
+        brand: "Top Ocean People",
+        home: "Home",
+        about: "About Us",
+        contact: "Contact",
+        welcome: "Welcome to PT Top Ocean People",
+        solution: "Your Best Solution for Logistics and Operations",
+        description: "PT Top Ocean People is a company engaged in operations and quality control, committed to professionalism and integrity.",
+        footer: "&copy; 2025 Top Ocean People. All rights reserved."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
-
 </html>

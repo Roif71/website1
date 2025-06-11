@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Top Ocean People - Tentang Kami</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .language-toggle {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .language-toggle button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .language-toggle button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
+
   <!-- NAVIGATION -->
   <nav>
     <div class="container">
       <a class="logo" href="index.html">Top Ocean People</a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tentangkami.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="index.html" data-id="nav-home">Home</a></li>
+        <li><a href="tentangkami.html" data-id="nav-about">Tentang Kami</a></li>
+        <li><a href="kontak.html" data-id="nav-contact">Kontak</a></li>
       </ul>
-      <div class="menu-icon" id="menu-icon">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <div class="language-toggle">
+        <button onclick="setLanguage('id')">ID</button>
+        <button onclick="setLanguage('en')">EN</button>
       </div>
     </div>
   </nav>
@@ -27,52 +45,80 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <h3>Tentang Kami</h3>
+      <h3 data-id="about-title">Tentang Kami</h3>
       <div class="about-list">
         <div class="about-box">
-          <h4><b>Visi:</b></h4>
-          <p>Menjadi perusahaan pengawakan internasional yang dipercaya dan terdepan di Indonesia.</p>
+          <h4 data-id="vision-title"><b>Visi:</b></h4>
+          <p data-id="vision-text">Menjadi perusahaan pengawakan internasional yang dipercaya dan terdepan di Indonesia.</p>
         </div>
         <div class="about-box">
-          <h4><b>Misi:</b></h4>
-          <p>1.Memberikan pelayanan pengawakan yang profesional.
-            2.Melakukan pemberdayaan sdm.</p>
-            <p>3.Mendorong inovasi pelayanan yang efektif guna mencapai kepuasan untuk seluruh pemangku kepentingan (STAKEHOLDER)</p>
+          <h4 data-id="mission-title"><b>Misi:</b></h4>
+          <p data-id="mission-text-1">1. Memberikan pelayanan pengawakan yang profesional.</p>
+          <p data-id="mission-text-2">2. Melakukan pemberdayaan sdm.</p>
+          <p data-id="mission-text-3">3. Mendorong inovasi pelayanan yang efektif guna mencapai kepuasan untuk seluruh pemangku kepentingan (STAKEHOLDER)</p>
         </div>
         <div class="about-box">
-          <h4><b>Kebijakan Mutu:</b></h4>
-          <p>"Manajemen dan seluruh karyawan berkomitmen dalam peningkatan pelayanan yang berkelanjutan untuk memberikan kepuasan pelanggan dan pemangku kepentingan (STAKEHOLDER)".</p>
+          <h4 data-id="quality-policy-title"><b>Kebijakan Mutu:</b></h4>
+          <p data-id="quality-policy-text">"Manajemen dan seluruh karyawan berkomitmen dalam peningkatan pelayanan yang berkelanjutan untuk memberikan kepuasan pelanggan dan pemangku kepentingan (STAKEHOLDER)".</p>
         </div>
-    <div class="container">
-      <h2>Sejarah Pt Top Ocean People</h2>
-      <div class="about-list">
-        <br><div class="about-box">
-          <h4><b>Pendirian dan Latar Belakang</b></h4>
-          <p>PT Top Ocean People didirikan pada Agustus 2009, dengan semangat untuk menjawab kebutuhan industri maritim global akan tenaga pelaut Indonesia yang andal, terlatih, dan berintegritas. Perusahaan ini memulai kegiatannya sebagai perusahaan manning agency yakni penyedia jasa rekrutmen dan penempatan awak kapal khususnya untuk kapal perikanan internasional. Pada tahun 2015, PT Top Ocean People secara resmi tercatat dalam sistem administrasi hukum nasional sebagai badan hukum berbentuk Perseroan Terbatas (PT), yang menandai babak baru dalam pengembangan legalitas dan ekspansi layanan profesional.</p>
-        </div>
-         <div class="about-box">
-          <h4><b>Perkembangan dan Ekspansi</b></h4>
-          <p>Dalam tahun-tahun awal operasionalnya, PT Top Ocean People menjalin kerja sama dengan berbagai perusahaan pelayaran asing untuk menyediakan awak kapal Indonesia yang siap pakai, khususnya untuk:
-            <p>-Kapal tangkap ikan (trawl, longliner Tuna).</p>
-            <p>-Kapal cumi-cumi (squid jigging vessels).</p>
-            <p>-Kapal kongchi / trawl samping.</p>
+
+        <h2 data-id="history-title">Sejarah PT Top Ocean People</h2>
+
+        <div class="about-box">
+          <h4 data-id="history-subtitle-1"><b>Pendirian dan Latar Belakang</b></h4>
+          <p data-id="history-text-1">
+            PT Top Ocean People didirikan oleh <b>YANAS IBRAHIM</b> dan <b>JIMMY GUNENA</b> pada Agustus 2009. Dengan semangat untuk menjawab kebutuhan industri maritim global akan tenaga pelaut Indonesia yang andal, terlatih, dan berintegritas.
           </p>
-        </div>
-         <div class="about-box">
-          <h4><b>Nilai-Nilai Perusahaan</b></h4>
-          <p>PT Top Ocean People dibangun di atas fondasi nilai-nilai utama seperti:
-            <p>-Integritas Mengutamakan kejujuran, transparansi, dan tanggung jawab dalam setiap kegiatan usaha.</p>
-            <p>-Menjaga kualitas pelayanan dan keahlian dalam menangani seluruh proses manajemen kru.</p>
-            <p>-Komitmen terhadap mitra dan pelaut Berorientasi pada keberlanjutan kerja sama jangka panjang.</p>
-            <p>-Kepatuhan hukum Menjalankan usaha sesuai peraturan perundang-undangan nasional dan internasional.</p>
+          <p data-id="history-text-2">
+            Pada tahun 2015, PT Top Ocean People secara resmi tercatat sebagai badan hukum berbentuk Perseroan Terbatas (PT).
           </p>
         </div>
 
-        <h2><b>Ini Beberapa Foto Kapal Yang Bekerja Sama Dengan Kami</b></h2>
+        <div class="about-box">
+          <h4 data-id="history-subtitle-2"><b>Perkembangan dan Ekspansi</b></h4>
+          <p data-id="history-text-3">Dalam tahun-tahun awal operasionalnya, PT Top Ocean People menjalin kerja sama dengan berbagai perusahaan pelayaran asing untuk menyediakan awak kapal Indonesia, khususnya untuk:</p>
+          <ul>
+            <li data-id="list-1">Kapal long line tuna</li>
+            <li data-id="list-2">Kapal long dasar</li>
+            <li data-id="list-3">Kapal trawl</li>
+            <li data-id="list-4">Kapal cumi-cumi</li>
+            <li data-id="list-5">Kapal kongchi / trawl samping</li>
+          </ul>
+        </div>
+
+        <div class="about-box">
+          <h4 data-id="history-subtitle-3"><b>Nilai-Nilai Perusahaan</b></h4>
+          <p data-id="history-text-4">PT Top Ocean People dibangun di atas fondasi nilai-nilai utama seperti:</p>
+          <ul>
+            <li data-id="value-1">Integritas: kejujuran, transparansi, dan tanggung jawab</li>
+            <li data-id="value-2">Kualitas pelayanan: Menjaga keahlian kru</li>
+            <li data-id="value-3">Komitmen: Kerja sama jangka panjang</li>
+            <li data-id="value-4">Kepatuhan hukum: Sesuai hukum nasional dan internasional</li>
+          </ul>
+        </div>
+
+        <h2 data-id="gallery-title"><b>Ini Beberapa Foto Kapal Yang Bekerja Sama Dengan Kami</b></h2>
         <div class="about-images">
-           <img src="image/agnes83.jpg" alt="agnes83">
-           <img src="image/namgung501.jpg" alt="namgung501">
-           <img src="image/panalox501.jpg" alt="panalox501">
+          <div class="image-box">
+            <img src="image/agnes83.jpg" alt="agnes83">
+            <p><b>AGNES83</b></p>
+          </div>
+          <div class="image-box">
+            <img src="image/namgung501.jpg" alt="namgung501">
+            <p><b>NAMGUNG501</b></p>
+          </div>
+          <div class="image-box">
+            <img src="image/panalox501.jpg" alt="panalox501">
+            <p><b>PANALOX501</b></p>
+          </div>
+        </div>
+
+        <!-- Modal popup -->
+        <div id="imgModal" class="modal">
+          <div class="modal-wrapper">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+          </div>
         </div>
       </div>
     </div>
@@ -80,9 +126,76 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Top Ocean People. All rights reserved.</p>
+    <p data-id="footer">&copy; 2025 Top Ocean People. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- SCRIPT -->
+  <script>
+    const translations = {
+      en: {
+        'nav-home': 'Home',
+        'nav-about': 'About Us',
+        'nav-contact': 'Contact',
+        'about-title': 'About Us',
+        'vision-title': 'Vision:',
+        'vision-text': 'To become a trusted and leading international manning company in Indonesia.',
+        'mission-title': 'Mission:',
+        'mission-text-1': '1. Provide professional manning services.',
+        'mission-text-2': '2. Empower human resources.',
+        'mission-text-3': '3. Promote effective service innovation to satisfy all stakeholders.',
+        'quality-policy-title': 'Quality Policy:',
+        'quality-policy-text': '"Management and all employees are committed to continuous service improvement to ensure satisfaction of customers and stakeholders."',
+        'history-title': 'History of PT Top Ocean People',
+        'history-subtitle-1': 'Establishment and Background',
+        'history-text-1': 'PT Top Ocean People was founded by YANAS IBRAHIM and JIMMY GUNENA in August 2009 to meet the global maritime industry\'s demand for skilled and trusted Indonesian seafarers.',
+        'history-text-2': 'In 2015, the company was officially registered as a legal entity (PT) in Indonesia.',
+        'history-subtitle-2': 'Development and Expansion',
+        'history-text-3': 'In its early years, the company collaborated with international shipping companies to supply Indonesian crews, especially for:',
+        'list-1': 'Long line tuna vessels',
+        'list-2': 'Bottom long line vessels',
+        'list-3': 'Trawl vessels',
+        'list-4': 'Squid vessels',
+        'list-5': 'Kongchi / side trawl vessels',
+        'history-subtitle-3': 'Company Values',
+        'history-text-4': 'Top Ocean People is built on core values such as:',
+        'value-1': 'Integrity: honesty, transparency, and responsibility',
+        'value-2': 'Service Quality: ensuring expert crew handling',
+        'value-3': 'Commitment: long-term cooperation with partners and crew',
+        'value-4': 'Legal Compliance: following national and international laws',
+        'gallery-title': 'Some Vessels Partnered With Us',
+        'footer': '&copy; 2025 Top Ocean People. All rights reserved.'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-id]').forEach(el => {
+        const id = el.getAttribute('data-id');
+        if (!el.hasAttribute('data-idn')) {
+          el.setAttribute('data-idn', el.innerHTML);
+        }
+        if (lang === 'en') {
+          el.innerHTML = translations.en[id] || el.innerHTML;
+        } else if (lang === 'id') {
+          el.innerHTML = el.getAttribute('data-idn') || el.innerHTML;
+        }
+      });
+    }
+
+    // Modal image popup
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".image-box img").forEach(img => {
+      img.onclick = () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      }
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
