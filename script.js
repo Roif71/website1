@@ -21,3 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+ menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+ });
+
