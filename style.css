@@ -448,3 +448,13 @@ button:hover {
   background-color: #000000;
 }
 
+.kapal-list li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.kapal-list small {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
