@@ -391,51 +391,6 @@ section {
   justify-content: center;
 }
 
-
-
-.struktur-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 4rem 1rem;
-  flex-wrap: wrap;
-}
-
-.struktur-text {
-  flex: 1 1 45%;
-  color: #000;
-}
-
-.struktur-image {
-  flex: 1 1 45%;
-}
-
-.struktur-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .struktur-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .struktur-text, .struktur-image {
-    flex: 1 1 100%;
-  }
-
-  .struktur-image img {
-    max-width: 90%;
-  }
-}
-
-
 /* Footer */
 footer {
   background-color: rgb(1, 42, 179);
