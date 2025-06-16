@@ -15,13 +15,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.brand-text {
-  color: rgb(129, 235, 243); /* Biru elegan */
-  font-style: italic; /* Opsional, agar tidak miring */
-  font-weight: bold;
-  font-size: 20px;
-}
-
 
 /* Logo */
 .logo {
@@ -31,6 +24,7 @@ body::-webkit-scrollbar {
   color: rgb(129, 235, 243);
   text-decoration: none;
   padding-left: 5px;
+  font-style: italic;
 }
 
 .logo-img {
@@ -38,6 +32,50 @@ body::-webkit-scrollbar {
   width: auto;
   border-radius: 5px;
 }
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+
+.language-selector {
+  margin-left: 1rem;
+}
+
+.language-selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    margin-top: 1rem;
+  }
+
+  nav .nav-links.active + .language-selector {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
+
 
 /* Navigation */
 nav {
@@ -106,6 +144,28 @@ nav .nav-links li a:hover::after {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section div {
+    flex-direction: column !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 .menu-icon {
   display: none;
@@ -176,9 +236,9 @@ section {
 }
 
 #hero {
-  background-color: #000;
+  background-color: #ffffff;
   padding-top: 80px;
-  color: white;
+  color: rgb(1, 1, 1);
 }
 
 .container.hero-container {
@@ -209,7 +269,7 @@ section {
 
 .hero-content {
   flex: 1 1 45%;
-  color: white;
+  color: rgb(11, 10, 10);
   text-align: left;
 }
 
@@ -243,6 +303,18 @@ section {
     font-size: 1rem;
   }
 }
+
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 8px; /* jarak antar item */
+  padding-left: 20px; /* indentasi */
+}
+
+.country-list li {
+  list-style: none; /* hilangkan bullet */
+}
+
 
 /* Overlay */
 .overlay {
@@ -458,3 +530,41 @@ button:hover {
   font-size: 0.9em;
   margin-left: 8px;
 }
+
+
+#language-switcher {
+  padding: 6px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+

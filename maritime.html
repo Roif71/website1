@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PT Top Ocean Maritime</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahkan styling untuk dropdown bahasa */
+    .language-selector {
+      margin-left: 20px;
+    }
+
+    .language-selector select {
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container">
+      <a class="logo" href="index.html"><h3>Top Ocean Maritime</h3></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-id="menu-home">Home</a></li>
+        <li><a href="tentangkami.html" data-id="menu-about">Tentang Kami</a></li>
+        <li><a href="kontak.html" data-id="menu-contact">Kontak</a></li>
+        <li class="language-selector">
+          <select id="languageSelect">
+            <option value="id">🇮🇩 Indonesia</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="kr">🇰🇷 한국어</option>
+            <option value="jp">🇯🇵 日本語</option>
+          </select>
+        </li>
+      </ul>
+      <div class="menu-icon" id="menuIcon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h3 data-id="about-title"><u>PT TOP OCEAN MARITIME</u></h3>
+      <div class="about-list">
+
+        <div class="about-box">
+          <h4 data-id="section-about-title"><b>Tentang Kami:</b></h4>
+          <p data-id="section-about-text">
+            PT Top Ocean Maritime adalah penyedia layanan tenaga kerja Indonesia untuk sektor luar negeri. 
+            Kami fokus pada pengiriman SDM unggul yang telah mendapatkan pelatihan dan legalitas resmi, menjamin keamanan serta kelayakan kerja di luar negeri.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h4 data-id="section-departure-title"><b>Keberangkatan:</b></h4>
+          <p data-id="section-departure-text">Untuk saat ini kami hanya baru memberangkatkan para pekerja ke dua negara, yaitu :</p>
+          <p data-id="departure-1">1. Korea.</p>
+          <p data-id="departure-2">2. Jepang.</p>
+        </div>
+
+        <div class="about-box">
+          <h4 data-id="section-placement-title"><b>Penempatan Kerja:</b></h4>
+          <p data-id="section-placement-text">Untuk penempatan kerja kita sudah tersedia untuk bekerja di beberapa bidang pekerjaan, seperti :</p>
+          <p data-id="job-1">1. Bangunan.</p>
+          <p data-id="job-2">2. Pertanian.</p>
+          <p data-id="job-3">3. Supir Bus.</p>
+          <p data-id="job-4">4. Supir Taxi.</p>
+          <p data-id="job-5">5. Pabrik.</p>
+          <p data-id="job-6">6. Elektrikal.</p>
+          <p data-id="job-7">7. Panti Jompo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Top Ocean People. All rights reserved.</p>
+  </footer>
+
+<script>
+  const menuIcon = document.getElementById('menuIcon');
+  const navLinks = document.getElementById('navLinks');
+
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+  });
+
+  const translations = {
+    id: {
+  "menu-home": "Home",
+  "menu-about": "Tentang Kami",
+  "menu-contact": "Kontak",
+  "about-title": "PT TOP OCEAN MARITIME",
+  "section-about-title": "Tentang Kami:",
+  "section-about-text": "PT Top Ocean Maritime adalah penyedia layanan tenaga kerja Indonesia untuk sektor luar negeri. Kami fokus pada pengiriman SDM unggul yang telah mendapatkan pelatihan dan legalitas resmi, menjamin keamanan serta kelayakan kerja di luar negeri.",
+  "section-departure-title": "Keberangkatan:",
+  "section-departure-text": "Untuk saat ini kami hanya baru memberangkatkan para pekerja ke dua negara, yaitu :",
+  "departure-1": "1. Korea.",
+  "departure-2": "2. Jepang.",
+  "section-placement-title": "Penempatan Kerja:",
+  "section-placement-text": "Untuk penempatan kerja kita sudah tersedia untuk bekerja di beberapa bidang pekerjaan, seperti :",
+  "job-1": "1. Bangunan.",
+  "job-2": "2. Pertanian.",
+  "job-3": "3. Supir Bus.",
+  "job-4": "4. Supir Taxi.",
+  "job-5": "5. Pabrik.",
+  "job-6": "6. Elektrikal.",
+  "job-7": "7. Panti Jompo."
+  },
+    en: {
+      "menu-home": "Home",
+      "menu-about": "About Us",
+      "menu-contact": "Contact",
+      "about-title": "PT TOP OCEAN MARITIME",
+      "section-about-title": "About Us:",
+      "section-about-text": "PT Top Ocean Maritime is a provider of Indonesian workforce services for the overseas sector. We focus on sending highly trained and legally certified human resources to ensure safety and proper work standards abroad.",
+      "section-departure-title": "Deployment:",
+      "section-departure-text": "Currently, we are only sending workers to two countries:",
+      "departure-1": "1. South Korea.",
+      "departure-2": "2. Japan.",
+      "section-placement-title": "Job Placement:",
+      "section-placement-text": "We offer job placements in various sectors such as:",
+      "job-1": "1. Construction.",
+      "job-2": "2. Agriculture.",
+      "job-3": "3. Bus Driver.",
+      "job-4": "4. Taxi Driver.",
+      "job-5": "5. Factory.",
+      "job-6": "6. Electrical.",
+      "job-7": "7. Nursing Home."
+    },
+    kr: {
+      "menu-home": "홈",
+      "menu-about": "회사 소개",
+      "menu-contact": "연락처",
+      "about-title": "PT TOP OCEAN MARITIME",
+      "section-about-title": "회사 소개:",
+      "section-about-text": "PT Top Ocean Maritime는 해외 분야를 위한 인도네시아 인력 서비스를 제공하는 회사입니다. 우리는 훈련을 받은 합법적인 인력을 파견하여 해외 근로의 안전과 적합성을 보장합니다.",
+      "section-departure-title": "출국:",
+      "section-departure-text": "현재는 다음 두 나라로만 인력을 파견하고 있습니다:",
+      "departure-1": "1. 한국.",
+      "departure-2": "2. 일본.",
+      "section-placement-title": "취업 분야:",
+      "section-placement-text": "다음과 같은 여러 분야로 취업이 가능합니다:",
+      "job-1": "1. 건설업.",
+      "job-2": "2. 농업.",
+      "job-3": "3. 버스 기사.",
+      "job-4": "4. 택시 기사.",
+      "job-5": "5. 공장.",
+      "job-6": "6. 전기 기술자.",
+      "job-7": "7. 요양원."
+    },
+    jp: {
+      "menu-home": "ホーム",
+      "menu-about": "会社概要",
+      "menu-contact": "お問い合わせ",
+      "about-title": "PT TOP OCEAN MARITIME",
+      "section-about-title": "会社概要:",
+      "section-about-text": "PT Top Ocean Maritimeは、海外で働くためのインドネシア人労働者を提供する会社です。訓練と法的手続きを経た人材を派遣し、安全で適切な労働環境を提供します。",
+      "section-departure-title": "出国先:",
+      "section-departure-text": "現在、以下の2か国にのみ労働者を派遣しています:",
+      "departure-1": "1. 韓国.",
+      "departure-2": "2. 日本.",
+      "section-placement-title": "職種:",
+      "section-placement-text": "以下の職種での仕事が可能です:",
+      "job-1": "1. 建設業.",
+      "job-2": "2. 農業.",
+      "job-3": "3. バス運転手.",
+      "job-4": "4. タクシー運転手.",
+      "job-5": "5. 工場.",
+      "job-6": "6. 電気技師.",
+      "job-7": "7. 老人ホーム."
+    }
+  };
+
+  const languageSelect = document.getElementById("languageSelect");
+  languageSelect.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    const elements = document.querySelectorAll("[data-id]");
+    elements.forEach(el => {
+      const key = el.getAttribute("data-id");
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
