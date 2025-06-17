@@ -1,82 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Top Ocean People - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahkan styling untuk dropdown bahasa */
+    .language-selector {
+      margin-left: 20px;
+    }
+
+    .language-selector select {
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- NAVIGATION -->
- <nav>
-  <div class="container logo-container">
-    <div class="brand">
-      <img src="image/logo.png" alt="Logo" class="logo-img" />
-      <a class="logo" href="index.html"><h3>Top Ocean People</h3></a>
+  <nav>
+    <div class="container logo-container">
+      <div class="brand">
+        <img src="image/logo.png" alt="Logo" class="logo-img" />
+        <a class="logo" href="index.html"><h3>PT Top Ocean</h3></a>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="menu-home">Home</a></li>
+        <li><a href="layanan.html" data-i18n="menu-about">Layanan</a></li>
+        <li><a href="kontak.html" data-i18n="menu-contact">Kontak</a></li>
+        <li class="language-selector">
+          <select id="languageSelect">
+            <option value="id">🇮🇩 Indonesia</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="kr">🇰🇷 한국어</option>
+            <option value="jp">🇯🇵 日本語</option>
+          </select>
+        </li>
+      </ul>
+      <div class="menu-icon" id="menuIcon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tentangkami.html">Tentang Kami</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
+  <!-- HERO -->
+  <section style="padding: 100px 20px; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
 
-    <div class="menu-icon" id="menuIcon">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+      <!-- Kolom Kanan: Gambar -->
+      <div style="flex: 1 1 300px; display: flex; align-items: center; justify-content: center;">
+        <img src="image/kapal.png" alt="Kapal" style="width: 100%; max-width: 500px; max-height: 500px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+      </div>
+
+      <!-- Kolom Kiri: 2 Kartu -->
+      <div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- Kartu 1: Penempatan -->
+        <div style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: white;">
+          <div style="padding: 20px;">
+            <div style="font-size: 20px; font-weight: bold; margin: 8px 0;" data-i18n="card-1-title">PT TOP OCEAN PEOPLE</div>
+            <div style="font-size: 14px; color: #000000; margin-bottom: 10px;" data-i18n="card-1-text">
+              Selamat datang di PT Top Ocean People, solusi terbaik untuk pemberangkatan dan penempatan awak kapal.
+            </div>
+            <a href="penempatan.html" style="color: #ff0000; text-decoration: none; font-size: 14px;" data-i18n="read-more">read more</a>
+          </div>
+        </div>
+
+        <!-- Kartu 2: Maritime -->
+        <div style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: white;">
+          <div style="padding: 20px;">
+            <div style="font-size: 20px; font-weight: bold; margin: 8px 0;" data-i18n="card-2-title">PT TOP OCEAN MARITIME</div>
+            <div style="font-size: 14px; color: #000000; margin-bottom: 10px;" data-i18n="card-2-text">
+              Selamat datang di PT Top Ocean Maritime, solusi terbaik untuk pemberangkatan tenaga kerja Indonesia.
+            </div>
+            <a href="maritime.html" style="color: #ff0000; text-decoration: none; font-size: 14px;" data-i18n="read-more">read more</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-
-
-<section style="padding: 100px 20px; background: #fff;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-
-     <!-- Kolom Kanan: Gambar -->
-    <div style="flex: 1 1 300px; display: flex; align-items: center; justify-content: center;">
-      <img src="image/kapal.png" alt="Kapal" style="width: 100%; max-width: 500px; max-height: 500px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
-    </div>
-
-    <!-- Kolom Kiri: 2 Kartu -->
-    <div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 20px;">
-
-      <!-- Kartu 1: Penempatan -->
-<div style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: white;">
-  <div style="padding: 20px;">
-    <div style="font-size: 20px; font-weight: bold; margin: 8px 0;">PT TOP OCEAN PEOPLE</div>
-    <div style="font-size: 14px; color: #000000; margin-bottom: 10px;">
-      Selamat datang di PT Top Ocean People, solusi terbaik untuk pemberangkatan dan penempatan awak kapal.
-    </div>
-    <a href="penempatan.html" style="color: #ff0000; text-decoration: none; font-size: 14px;">read more</a>
-  </div>
-</div>
-
-<!-- Kartu 2: Maritime -->
-<div style="width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: white;">
-  <div style="padding: 20px;">
-    <div style="font-size: 20px; font-weight: bold; margin: 8px 0;">PT TOP OCEAN MARITIME</div>
-    <div style="font-size: 14px; color: #000000; margin-bottom: 10px;">
-      Selamat datang di PT Top Ocean Maritime, solusi terbaik untuk pemberangkatan tenaga kerja Indonesia.
-    </div>
-    <a href="maritime.html" style="color: #ff0000; text-decoration: none; font-size: 14px;">read more</a>
-  </div>
-</div>
-</div>
-
-  </div>
-</section>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     <p data-i18n="footer">&copy; 2025 Top Ocean People. All rights reserved.</p>
   </footer>
-</body>
 
-<script>
+  <!-- SCRIPT -->
+  <script>
   const menuIcon = document.getElementById('menuIcon');
   const navLinks = document.getElementById('navLinks');
 
@@ -84,6 +101,67 @@
     navLinks.classList.toggle('active');
     menuIcon.classList.toggle('active');
   });
+
+  const translations = {
+    id: {
+      "menu-home": "Beranda",
+      "menu-about": "Layanan",
+      "menu-contact": "Kontak",
+      "card-1-title": "PT TOP OCEAN PEOPLE",
+      "card-1-text": "Selamat datang di PT Top Ocean People, solusi terbaik untuk pemberangkatan dan penempatan awak kapal.",
+      "card-2-title": "PT TOP OCEAN MARITIME",
+      "card-2-text": "Selamat datang di PT Top Ocean Maritime, solusi terbaik untuk pemberangkatan tenaga kerja Indonesia.",
+      "read-more": "selengkapnya",
+      "footer": "© 2025 Top Ocean People. All rights reserved."
+    },
+    en: {
+      "menu-home": "Home",
+      "menu-about": "Services",
+      "menu-contact": "Contact",
+      "card-1-title": "PT TOP OCEAN PEOPLE",
+      "card-1-text": "Welcome to PT Top Ocean People, the best solution for seafarer deployment and placement.",
+      "card-2-title": "PT TOP OCEAN MARITIME",
+      "card-2-text": "Welcome to PT Top Ocean Maritime, the best solution for Indonesian overseas workforce placement.",
+      "read-more": "read more",
+      "footer": "© 2025 Top Ocean People. All rights reserved."
+    },
+    jp: {
+      "menu-home": "ホーム",
+      "menu-about": "サービス",
+      "menu-contact": "お問い合わせ",
+      "card-1-title": "PT TOP OCEAN PEOPLE",
+      "card-1-text": "PT Top Ocean Peopleへようこそ。船員の出発と配置に最適なソリューションを提供します。",
+      "card-2-title": "PT TOP OCEAN MARITIME",
+      "card-2-text": "PT Top Ocean Maritimeへようこそ。インドネシア人労働者の海外派遣に最適なソリューションです。",
+      "read-more": "続きを読む",
+      "footer": "© 2025 Top Ocean People. All rights reserved.",
+    },
+    kr: {
+      "menu-home": "홈",
+      "menu-about": "서비스",
+      "menu-contact": "문의하기",
+      "card-1-title": "PT TOP OCEAN PEOPLE",
+      "card-1-text": "PT Top Ocean People에 오신 것을 환영합니다. 선원 파견 및 배치에 대한 최고의 솔루션입니다.",
+      "card-2-title": "PT TOP OCEAN MARITIME",
+      "card-2-text": "PT Top Ocean Maritime에 오신 것을 환영합니다. 인도네시아 해외 노동자 파견을 위한 최고의 솔루션입니다.",
+      "read-more": "자세히 보기",
+      "footer": "© 2025 Top Ocean People. All rights reserved."
+    },
+  };
+
+  const languageSelect = document.getElementById("languageSelect");
+  languageSelect.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    const elements = document.querySelectorAll("[data-i18n]");
+    elements.forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  });
 </script>
 
+
+</body>
 </html>

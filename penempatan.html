@@ -26,7 +26,7 @@
       <a class="logo" href="index.html"><h3>Top Ocean People</h3></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" data-id="menu-home">Home</a></li>
-        <li><a href="tentangkami.html" data-id="menu-about">Tentang Kami</a></li>
+        <li><a href="layanan.html" data-id="menu-about">Layanan</a></li>
         <li><a href="kontak.html" data-id="menu-contact">Kontak</a></li>
         <li class="language-selector">
           <select id="languageSelect">
@@ -155,7 +155,7 @@
           </div>
         </div>
 
-         <!-- Modal popup -->
+        <!-- Modal popup -->
         <div id="imgModal" class="modal">
           <div class="modal-wrapper">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -183,7 +183,7 @@
     const translations = {
       id: {
   "menu-home": "Home",
-  "menu-about": "Tentang Kami",
+  "menu-about": "Layanan",
   "menu-contact": "Kontak",
   "about-title": "PT TOP OCEAN PEOPLE",
   "vision-title": "Visi:",
@@ -234,7 +234,7 @@
 }, 
       en: {
         "menu-home": "Home",
-        "menu-about": "About Us",
+        "menu-about": "Services",
         "menu-contact": "Contact",
         "about-title": "PT TOP OCEAN PEOPLE",
         "vision-title": "Vision:",
@@ -285,7 +285,7 @@
       },
       kr: {
         "menu-home": "홈",
-"menu-about": "회사 소개",
+"menu-about": "서비스",
 "menu-contact": "연락처",
 "about-title": "PT TOP OCEAN PEOPLE",
 "vision-title": "비전:",
@@ -336,7 +336,7 @@
       },
       jp: {
         "menu-home": "ホーム", 
-"menu-about": "私たちについて",
+"menu-about": "サービス",
 "menu-contact": "お問い合わせ",
 "about-title": "PT TOP OCEAN PEOPLE",
 "vision-title": "ビジョン：",
@@ -398,6 +398,21 @@
       }
     });
   });
+
+  // Modal image popup
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".image-box img").forEach(img => {
+      img.onclick = () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      }
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
 </script>
 
   </body>

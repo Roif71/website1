@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Ocean People - Layanan</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahkan styling untuk dropdown bahasa */
+    .language-selector {
+      margin-left: 20px;
+    }
+
+    .language-selector select {
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- NAVIGATION -->
+   <!-- NAVIGATION -->
+  <nav>
+    <div class="container logo-container">
+      <div class="brand">
+        <img src="image/logo.png" alt="Logo" class="logo-img" />
+        <a class="logo" href="index.html"><h3>PT Top Ocean</h3></a>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="menu-home">Home</a></li>
+        <li><a href="layanan.html" data-i18n="menu-about">Layanan</a></li>
+        <li><a href="kontak.html" data-i18n="menu-contact">Kontak</a></li>
+        <li class="language-selector">
+          <select id="languageSelect">
+            <option value="id">🇮🇩 Indonesia</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="kr">🇰🇷 한국어</option>
+            <option value="jp">🇯🇵 日本語</option>
+          </select>
+        </li>
+      </ul>
+      <div class="menu-icon" id="menuIcon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h3 data-id="about-title">Layanan</h3>
+      <div class="about-list">
+         <div class="about-box">
+          <h4 data-id="vision-title"><b>Tentang Pelayanan Kami</b></h4><br>
+          <p data-id="vision-text">"<b>PT Top Ocean People dan PT Top Ocean Maritime</b> berkomitmen untuk menyediakan layanan terbaik dalam industri maritim dan tenaga kerja. Berikut adalah berbagai layanan yang kami sediakan untuk mendukung kebutuhan klien kami secara profesional dan terintegrasi."</p>
+        </div>
+
+        <div class="about-box">
+  <h4 data-id="mission-title"><b>Layanan Kami:</b></h4>
+  <div class="services-container">
+    <div class="service-item">
+      <p><b>1. Penempatan Awak Kapal</b></p>
+      <p>Kami menyalurkan awak kapal ke berbagai perusahaan pelayaran nasional dan internasional dengan seleksi ketat dan pelatihan yang memadai.</p>
+    </div>
+    <div class="service-item">
+      <p><b>2. Pengurusan Dokumen Pelaut</b></p>
+      <p>Kami membantu proses pembuatan dan pembaruan dokumen penting seperti Buku Pelaut, BST, Paspor, SKCK, dan lainnya.</p>
+    </div>
+    <div class="service-item">
+      <p><b>3. Rekrutmen dan Pelatihan SDM</b></p>
+      <p>Menyediakan pelatihan dasar dan lanjutan untuk meningkatkan kompetensi tenaga kerja sesuai standar industri.</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-box">
+  <h4 data-id="mission-title"><b></b></h4>
+  <div class="services-container">
+    <div class="service-item">
+      <p><b>4. Konsultasi dan Legalitas</b></p>
+      <p>Memberikan layanan konsultasi hukum, regulasi, dan perizinan tenaga kerja maritim dan pengiriman ke luar negeri.</p>
+    </div>
+    <div class="service-item">
+      <p><b>5. Pemeriksaan Kesehatan (Medical Check-up)</b></p>
+      <p>Bekerja sama dengan klinik dan rumah sakit terpercaya untuk memastikan kondisi kesehatan tenaga kerja sebelum penempatan.</p>
+    </div>
+    <div class="service-item">
+      <p><b>6. Logistik dan Transportasi Penempatan</b></p>
+      <p>Menyediakan bantuan untuk keberangkatan, seperti tiket perjalanan dan akomodasi sementara.</p>
+    </div>
+  </div>
+</div>
+
+         <div class="about-box">
+          <h4 data-id="mission-title"><b>Kenapa Memilih Kami :</b></h4><br>
+          <p data-id="mission-text-1">✅ Legal dan berizin resmi</p>
+          <p data-id="mission-text-2">✅ Proses transparan dan cepat</p>
+          <p data-id="mission-text-3">✅ Jaringan global dan mitra terpercaya</p>
+          <p data-id="mission-text-4">✅ Komitmen terhadap kesejahteraan awak kapal</p>
+        </div>
+
+        <div class="about-box">
+        <h4 data-id="gallery-title"><b>Foto Keberangkatan Para Awak Kapal</b></h4>
+        
+        </div>
+
+        <!-- Modal popup -->
+        <div id="imgModal" class="modal">
+          <div class="modal-wrapper">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p data-id="footer">&copy; 2025 Top Ocean People. All rights reserved.</p>
+  </footer>
+
+ <!-- SCRIPT -->
+  <script>
+  const menuIcon = document.getElementById('menuIcon');
+  const navLinks = document.getElementById('navLinks');
+
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+  });
+
+
+    const languageSelect = document.getElementById("languageSelect");
+    languageSelect.addEventListener("change", (e) => {
+      const lang = e.target.value;
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+    });
+  });
+
+    // Modal image popup
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".image-box img").forEach(img => {
+      img.onclick = () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      }
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
