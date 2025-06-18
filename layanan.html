@@ -20,9 +20,8 @@
 </head>
 <body>
 
- <!-- NAVIGATION -->
    <!-- NAVIGATION -->
-  <nav>
+ <nav>
     <div class="container logo-container">
       <div class="brand">
         <img src="image/logo.png" alt="Logo" class="logo-img" />
@@ -30,9 +29,9 @@
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-i18n="menu-home">Home</a></li>
-        <li><a href="layanan.html" data-i18n="menu-about">Layanan</a></li>
-        <li><a href="kontak.html" data-i18n="menu-contact">Kontak</a></li>
+        <li><a href="index.html" data-id="menu-home">Home</a></li>
+        <li><a href="layanan.html" data-id="menu-about">Layanan</a></li>
+        <li><a href="kontak.html" data-id="menu-contact">Kontak</a></li>
         <li class="language-selector">
           <select id="languageSelect">
             <option value="id">🇮🇩 Indonesia</option>
@@ -54,6 +53,7 @@
   <section id="about">
     <div class="container">
       <h3 data-id="about-title">Layanan</h3>
+
       <div class="about-list">
          <div class="about-box">
           <h4 data-id="vision-title"><b>Tentang Pelayanan Kami</b></h4><br>
@@ -64,40 +64,39 @@
   <h4 data-id="mission-title"><b>Layanan Kami:</b></h4>
   <div class="services-container">
     <div class="service-item">
-      <p><b>1. Penempatan Awak Kapal</b></p>
-      <p>Kami menyalurkan awak kapal ke berbagai perusahaan pelayaran nasional dan internasional dengan seleksi ketat dan pelatihan yang memadai.</p>
+      <p data-id="service-1-title"><b>1. Penempatan Awak Kapal</b></p>
+      <p data-id="service-1-text">Kami menyalurkan awak kapal ke berbagai perusahaan pelayaran nasional dan internasional dengan seleksi ketat dan pelatihan yang memadai.</p>
     </div>
     <div class="service-item">
-      <p><b>2. Pengurusan Dokumen Pelaut</b></p>
-      <p>Kami membantu proses pembuatan dan pembaruan dokumen penting seperti Buku Pelaut, BST, Paspor, SKCK, dan lainnya.</p>
+      <p data-id="service-2-title"><b>2. Pengurusan Dokumen Pelaut</b></p>
+      <p data-id="service-2-text">Kami membantu proses pembuatan dan pembaruan dokumen penting seperti Buku Pelaut, BST, Paspor, SKCK, dan lainnya.</p>
     </div>
     <div class="service-item">
-      <p><b>3. Rekrutmen dan Pelatihan SDM</b></p>
-      <p>Menyediakan pelatihan dasar dan lanjutan untuk meningkatkan kompetensi tenaga kerja sesuai standar industri.</p>
+      <p data-id="service-3-title"><b>3. Rekrutmen dan Pelatihan SDM</b></p>
+      <p data-id="service-3-text">Menyediakan pelatihan dasar dan lanjutan untuk meningkatkan kompetensi tenaga kerja sesuai standar industri.</p>
     </div>
   </div>
 </div>
 
 <div class="about-box">
-  <h4 data-id="mission-title"><b></b></h4>
   <div class="services-container">
     <div class="service-item">
-      <p><b>4. Konsultasi dan Legalitas</b></p>
-      <p>Memberikan layanan konsultasi hukum, regulasi, dan perizinan tenaga kerja maritim dan pengiriman ke luar negeri.</p>
+      <p data-id="service-4-title"><b>4. Konsultasi dan Legalitas</b></p>
+      <p data-id="service-4-text">Memberikan layanan konsultasi hukum, regulasi, dan perizinan tenaga kerja maritim dan pengiriman ke luar negeri.</p>
     </div>
     <div class="service-item">
-      <p><b>5. Pemeriksaan Kesehatan (Medical Check-up)</b></p>
-      <p>Bekerja sama dengan klinik dan rumah sakit terpercaya untuk memastikan kondisi kesehatan tenaga kerja sebelum penempatan.</p>
+      <p data-id="service-5-title"><b>5. Pemeriksaan Kesehatan (Medical Check-up)</b></p>
+      <p data-id="service-5-text">Bekerja sama dengan klinik dan rumah sakit terpercaya untuk memastikan kondisi kesehatan tenaga kerja sebelum penempatan.</p>
     </div>
     <div class="service-item">
-      <p><b>6. Logistik dan Transportasi Penempatan</b></p>
-      <p>Menyediakan bantuan untuk keberangkatan, seperti tiket perjalanan dan akomodasi sementara.</p>
+      <p data-id="service-6-title"><b>6. Logistik dan Transportasi Penempatan</b></p>
+      <p data-id="service-6-text">Menyediakan bantuan untuk keberangkatan, seperti tiket perjalanan dan akomodasi sementara.</p>
     </div>
   </div>
 </div>
 
          <div class="about-box">
-          <h4 data-id="mission-title"><b>Kenapa Memilih Kami :</b></h4><br>
+          <h4 data-id="why-title"><b>Kenapa Memilih Kami :</b></h4><br>
           <p data-id="mission-text-1">✅ Legal dan berizin resmi</p>
           <p data-id="mission-text-2">✅ Proses transparan dan cepat</p>
           <p data-id="mission-text-3">✅ Jaringan global dan mitra terpercaya</p>
@@ -105,8 +104,7 @@
         </div>
 
         <div class="about-box">
-        <h4 data-id="gallery-title"><b>Foto Keberangkatan Para Awak Kapal</b></h4>
-        
+        <h4 data-id="gallery-title"><b>Foto Keberangkatan Para Awak Kapal</b></h4>        
         </div>
 
         <!-- Modal popup -->
@@ -127,26 +125,140 @@
 
  <!-- SCRIPT -->
   <script>
-  const menuIcon = document.getElementById('menuIcon');
-  const navLinks = document.getElementById('navLinks');
+    const menuIcon = document.getElementById('menuIcon');
+    const navLinks = document.getElementById('navLinks');
 
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuIcon.classList.toggle('active');
-  });
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuIcon.classList.toggle('active');
+    });
 
+  const translations = {
+  id: {
+    "menu-home": "Home",
+    "menu-about": "Layanan",
+    "menu-contact": "Kontak",
+    "about-title": "Layanan",
+    "vision-title": "Tentang Pelayanan Kami",
+    "vision-text": "\"PT Top Ocean People dan PT Top Ocean Maritime\" berkomitmen untuk menyediakan layanan terbaik dalam industri maritim dan tenaga kerja. Berikut adalah berbagai layanan yang kami sediakan untuk mendukung kebutuhan klien kami secara profesional dan terintegrasi.",
+    "mission-title": "Layanan Kami:",
+    "service-1-title": "1. Penempatan Awak Kapal",
+    "service-1-text": "Kami menyalurkan awak kapal ke berbagai perusahaan pelayaran nasional dan internasional dengan seleksi ketat dan pelatihan yang memadai.",
+    "service-2-title": "2. Pengurusan Dokumen Pelaut",
+    "service-2-text": "Kami membantu proses pembuatan dan pembaruan dokumen penting seperti Buku Pelaut, BST, Paspor, SKCK, dan lainnya.",
+    "service-3-title": "3. Rekrutmen dan Pelatihan SDM",
+    "service-3-text": "Menyediakan pelatihan dasar dan lanjutan untuk meningkatkan kompetensi tenaga kerja sesuai standar industri.",
+    "service-4-title": "4. Konsultasi dan Legalitas",
+    "service-4-text": "Memberikan layanan konsultasi hukum, regulasi, dan perizinan tenaga kerja maritim dan pengiriman ke luar negeri.",
+    "service-5-title": "5. Pemeriksaan Kesehatan (Medical Check-up)",
+    "service-5-text": "Bekerja sama dengan klinik dan rumah sakit terpercaya untuk memastikan kondisi kesehatan tenaga kerja sebelum penempatan.",
+    "service-6-title": "6. Logistik dan Transportasi Penempatan",
+    "service-6-text": "Menyediakan bantuan untuk keberangkatan, seperti tiket perjalanan dan akomodasi sementara.",
+    "why-title": "Kenapa Memilih Kami :",
+    "mission-text-1": "✅ Legal dan berizin resmi",
+    "mission-text-2": "✅ Proses transparan dan cepat",
+    "mission-text-3": "✅ Jaringan global dan mitra terpercaya",
+    "mission-text-4": "✅ Komitmen terhadap kesejahteraan awak kapal",
+    "gallery-title": "Foto Keberangkatan Para Awak Kapal",
+    "footer": "© 2025 Top Ocean People. All rights reserved."
+  },
+  en: {
+    "menu-home": "Home",
+    "menu-about": "Services",
+    "menu-contact": "Contact",
+    "about-title": "Services",
+    "vision-title": "About Our Services",
+    "vision-text": "\"PT Top Ocean People and PT Top Ocean Maritime\" are committed to providing the best services in the maritime and labor industries. Below are the services we offer to support our clients professionally and in an integrated manner.",
+    "mission-title": "Our Services:",
+    "service-1-title": "1. Crew Placement",
+    "service-1-text": "We deploy crew members to national and international shipping companies with strict selection and adequate training.",
+    "service-2-title": "2. Seafarer Document Assistance",
+    "service-2-text": "We assist with the creation and renewal of important documents such as Seaman Book, BST, Passport, SKCK, and others.",
+    "service-3-title": "3. Recruitment and HR Training",
+    "service-3-text": "Providing basic and advanced training to enhance workforce competency according to industry standards.",
+    "service-4-title": "4. Consultation and Legal Services",
+    "service-4-text": "Providing legal consultation, regulations, and labor licensing services for maritime and overseas deployment.",
+    "service-5-title": "5. Health Check (Medical Check-up)",
+    "service-5-text": "In collaboration with trusted clinics and hospitals to ensure workers' health before deployment.",
+    "service-6-title": "6. Placement Logistics and Transportation",
+    "service-6-text": "Providing departure assistance such as travel tickets and temporary accommodation.",
+    "why-title": "Why Choose Us:",
+    "mission-text-1": "✅ Legal and officially licensed",
+    "mission-text-2": "✅ Transparent and fast process",
+    "mission-text-3": "✅ Global network and trusted partners",
+    "mission-text-4": "✅ Commitment to crew welfare",
+    "gallery-title": "Crew Departure Photos",
+    "footer": "© 2025 Top Ocean People. All rights reserved."
+  },
+  kr: {
+    "menu-home": "홈",
+    "menu-about": "서비스",
+    "menu-contact": "연락처",
+    "about-title": "서비스",
+    "vision-title": "우리의 서비스에 대해",
+    "vision-text": "\"PT Top Ocean People 및 PT Top Ocean Maritime\"은 해양 및 인력 산업에서 최고의 서비스를 제공하기 위해 최선을 다하고 있습니다. 아래는 고객의 요구를 전문적이고 통합적으로 지원하는 다양한 서비스입니다.",
+    "mission-title": "우리의 서비스:",
+    "service-1-title": "1. 선원 배치",
+    "service-1-text": "엄격한 선발과 적절한 훈련을 통해 국내외 해운회사에 선원을 배치합니다.",
+    "service-2-title": "2. 선원 서류 처리",
+    "service-2-text": "선원수첩, BST, 여권, 범죄경력증명서 등 중요한 서류의 발급과 갱신을 지원합니다.",
+    "service-3-title": "3. 인재 채용 및 교육",
+    "service-3-text": "산업 표준에 맞는 인재의 역량을 향상시키기 위한 기본 및 고급 교육을 제공합니다.",
+    "service-4-title": "4. 컨설팅 및 법률 서비스",
+    "service-4-text": "해양 및 해외 근로 허가와 관련된 법률 자문과 규정, 인력 허가 서비스를 제공합니다.",
+    "service-5-title": "5. 건강검진",
+    "service-5-text": "배치 전 건강 상태를 확인하기 위해 신뢰할 수 있는 병원 및 클리닉과 협력합니다.",
+    "service-6-title": "6. 배치 물류 및 운송",
+    "service-6-text": "출발을 위한 교통편, 숙소 등의 지원을 제공합니다.",
+    "why-title": "우리를 선택하는 이유:",
+    "mission-text-1": "✅ 합법적이고 공식 허가됨",
+    "mission-text-2": "✅ 투명하고 신속한 절차",
+    "mission-text-3": "✅ 글로벌 네트워크 및 신뢰할 수 있는 파트너",
+    "mission-text-4": "✅ 선원 복지에 대한 헌신",
+    "gallery-title": "선원 출발 사진",
+    "footer": "© 2025 Top Ocean People. 판권 소유."
+  },
+  jp: {
+    "menu-home": "ホーム",
+    "menu-about": "サービス",
+    "menu-contact": "お問い合わせ",
+    "about-title": "サービス",
+    "vision-title": "私たちのサービスについて",
+    "vision-text": "\"PT Top Ocean People と PT Top Ocean Maritime\" は、海事および労働業界で最高のサービスを提供することを約束しています。以下は、クライアントのニーズを専門的かつ統合的にサポートする当社のサービスです。",
+    "mission-title": "当社のサービス:",
+    "service-1-title": "1. 船員配置",
+    "service-1-text": "厳格な選考と十分な訓練を経て、国内外の船会社に船員を派遣します。",
+    "service-2-title": "2. 船員書類の手続き",
+    "service-2-text": "海員手帳、BST、パスポート、無犯罪証明書などの重要書類の取得と更新を支援します。",
+    "service-3-title": "3. 採用と人材育成",
+    "service-3-text": "業界基準に基づき、労働力の能力を高めるための基礎および高度なトレーニングを提供します。",
+    "service-4-title": "4. コンサルティングと法的サービス",
+    "service-4-text": "海外派遣および海事労働に関する法的アドバイス、規制、許認可サービスを提供します。",
+    "service-5-title": "5. 健康診断",
+    "service-5-text": "信頼できるクリニックや病院と提携し、派遣前に健康状態を確認します。",
+    "service-6-title": "6. 配置ロジスティクスと交通",
+    "service-6-text": "出発のための旅行チケットや一時的な宿泊施設の支援を提供します。",
+    "why-title": "当社を選ぶ理由:",
+    "mission-text-1": "✅ 合法的で正式に認可されています",
+    "mission-text-2": "✅ 透明で迅速なプロセス",
+    "mission-text-3": "✅ グローバルネットワークと信頼できるパートナー",
+    "mission-text-4": "✅ 船員の福祉への取り組み",
+    "gallery-title": "船員の出発写真",
+    "footer": "© 2025 Top Ocean People. 無断転載を禁じます。"
+  }
+};
 
-    const languageSelect = document.getElementById("languageSelect");
+     const languageSelect = document.getElementById("languageSelect");
     languageSelect.addEventListener("change", (e) => {
       const lang = e.target.value;
-      const elements = document.querySelectorAll("[data-i18n]");
+      const elements = document.querySelectorAll("[data-id]");
       elements.forEach(el => {
-        const key = el.getAttribute("data-i18n");
+        const key = el.getAttribute("data-id");
         if (translations[lang][key]) {
           el.textContent = translations[lang][key];
         }
+      });
     });
-  });
 
     // Modal image popup
     const modal = document.getElementById("imgModal");
@@ -156,7 +268,7 @@
       img.onclick = () => {
         modal.style.display = "flex";
         modalImg.src = img.src;
-      }
+      };
     });
 
     function closeModal() {
